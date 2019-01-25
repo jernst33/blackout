@@ -13,7 +13,8 @@ $(document).ready(function(){
                    "Tactical rifles only!",
                    "Secondaries only!",
                    "Equipment only! You may also use a bowie knife.",
-                   "Any weapon!"];
+                   "Any weapon!",
+                   "No attachments on any weapon!"];
 
     var armor = ["Level 1 only!",
                  "Level 2 only!",
@@ -28,26 +29,30 @@ $(document).ready(function(){
                      "Only concussions and smoke grenades!",
                      "Only the combat axe!"];
 
-    var vehicles = ["No equipment!",
-                    "Any equipment!",
-                    "Only grenades (molotovs count).",
-                    "Only concussions and smoke grenades!",
-                    "Only the combat axe!"];
+    var vehicles = ["No vehicles!",
+                    "Must ride at least one vehicle before you make it to the top 40!",
+                    "Only quads!",
+                    "Only trucks!!",
+                    "Only ARAVs!",
+                    "Only helis!", 
+                    "Only boats!"];
 
-    var meds = ["No equipment!",
-                "Any equipment!",
-                "Only grenades (molotovs count).",
-                "Only concussions and smoke grenades!",
-                "Only the combat axe!"];
+    var meds = ["No meds... GG!",
+                "Any meds!",
+                "Only first aids.",
+                "Only med kits!",
+                "Only trauma kits!",
+                "You can only use meds found from a death stash!",
+                "You can only use meds found on the ground... None from death stashes!"];
 
     var dropsLetters = ["A","B","C","D","E","F","G","H"];
     var dropsNumbers = ["1","2","3","4","5","6","7","8"];
 
-    var special = ["No equipment!",
-                         "Any equipment!",
-                         "Only grenades (molotovs count).",
-                         "Only concussions and smoke grenades!",
-                         "Only the combat axe!"];
+    var special = ["FIRST TRY: You can only use the first two guns you pick up!",
+                   "THE TURTLE: You can't sprint... At all... For the entire game...",
+                   "GUERILLA WARFARE: You can pick up one gun and its ammo. After this, you can only acquire items through the death stashes of the enemies you killed!",
+                   "LIGHTWEIGHT: You can't use backpacks!",
+                   "MY FAVORITE DROP ZONE: Overrides the random drop spot. You can only loot items found at the site you drop at (ex. Construction, Fracking, etc."];
 
     $("button").click(function(){
 
@@ -117,56 +122,5 @@ $(document).ready(function(){
         $("div.generated").append('<h2 class="generated">Special Challenge</h2>');
         $("div.generated").append('<p class="generated">' + special[Math.floor(Math.random()*special.length)] + "</p>");
     }
-  });
-
-
-
-
-
-
-/*
-  $("button").click(function(){
-    if ($("input.weapons").prop('checked')) { 
-        alert("Weapons checked!!");
-    } else { 
-        alert("Weapons not checked!!");
-    }
-
-    if ($("input.armor").prop('checked')) { 
-        alert("Armor checked!!");
-    } else { 
-        alert("Armor not checked!!");
-    }
-
-    if ($("input.equipment").prop('checked')) { 
-        alert("Equipment checked!!");
-    } else { 
-        alert("Equipment not checked!!");
-    }
-
-    if ($("input.vehicles").prop('checked')) { 
-        alert("Vehicles checked!!");
-    } else { 
-        alert("Vehicles not checked!!");
-    }
-
-    if ($("input.meds").prop('checked')) { 
-        alert("Meds checked!!");
-    } else { 
-        alert("Meds not checked!!");
-    }
-
-    if ($("input.drop").prop('checked')) { 
-        alert("Drop checked!!");
-    } else { 
-        alert("Drop not checked!!");
-    }
-
-    if ($("input.special").prop('checked')) { 
-        alert("Special challenge checked!!");
-    } else { 
-        alert("Special challenge not checked!!");
-    }
-  });
-*/
+  }); 
 });
